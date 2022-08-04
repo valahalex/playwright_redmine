@@ -1,0 +1,22 @@
+{
+  "name": "playwright_test_redmin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean":"rimraf allure-report && rimraf allure-results",
+    "test": "playwright test",
+    "test:head": "playwright test --headed",
+    "test:report": "npm run clean && playwright test --reporter=allure-playwright",
+    "allure-report": "npx allure generate ./allure-results && allure open allure-report"
+  },
+  "keywords": [],
+  "author": "valahalex",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.24.2",
+    "allure-commandline": "^2.18.1",
+    "allure-playwright": "^2.0.0-beta.18",
+    "rimraf": "^3.0.2"
+  }
+}
