@@ -20,7 +20,7 @@ test('First test redmine.org', async ({page})=> {
   await registrationPage.isConfLabelIsVisible();
 });
 
-test('second test redmine.org', async ({page})=> {
+test('Second test redmine.org', async ({page})=> {
 
   const mainPage = new MainPage(page);
   const searchPage = new SearchPage(page);
@@ -35,8 +35,8 @@ test('second test redmine.org', async ({page})=> {
 });
 
 
-test('third test redmine.org', async ({page})=> {
-  
+test('Third test redmine.org', async ({page})=> {
+
   const mainPage = new MainPage(page);
   const owerPage = new OwerPage(page);
 
