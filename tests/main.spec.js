@@ -16,7 +16,7 @@ test('First test redmine.org', async ({page})=> {
   await registrationPage.inputFirstName();
   await registrationPage.inputLastName();
   await registrationPage.inputEmail();
-  await registrataionPage.clickOnSubmitButton();
+  await registrationPage.clickOnSubmitButton();
   await registrationPage.isConfLabelIsVisible();
 });
 
