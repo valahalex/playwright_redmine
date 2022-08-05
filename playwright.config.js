@@ -34,7 +34,7 @@ const config = {
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ["html", { open: "never" }],
-    ['line'],
+    ['list'],
     ['allure-playwright'],
   ], 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
