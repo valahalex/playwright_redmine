@@ -1,4 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri Aug 05 12:56:27 UTC 2022","Fri Aug 05 12:56:30 UTC 2022","3030","chromium","main.spec.js","","","","Second test redmine.org",""
-"passed","Fri Aug 05 12:56:30 UTC 2022","Fri Aug 05 12:56:33 UTC 2022","3025","chromium","main.spec.js","","","","Third test redmine.org",""
-"passed","Fri Aug 05 12:56:21 UTC 2022","Fri Aug 05 12:56:27 UTC 2022","6719","chromium","main.spec.js","","","","First test redmine.org",""
+"passed","Fri Aug 05 13:16:35 UTC 2022","Fri Aug 05 13:16:42 UTC 2022","6900","chromium","main.spec.js","","","","First test redmine.org",""
+"passed","Fri Aug 05 13:16:42 UTC 2022","Fri Aug 05 13:16:45 UTC 2022","2913","chromium","main.spec.js","","","","Second test redmine.org",""
+"passed","Fri Aug 05 13:16:45 UTC 2022","Fri Aug 05 13:16:48 UTC 2022","2724","chromium","main.spec.js","","","","Third test redmine.org",""
