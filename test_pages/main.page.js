@@ -10,6 +10,8 @@ exports.MainPage = class MainPage {
     this.registerButton = page.locator('.register');
     this.searchInputField = page.locator('#q');
     this.owerButton = page.locator('[href="/projects/redmine"]');
+    this.forumButton = page.locator('[href="/projects/redmine/boards"]');
+    this.guideButton = page.locator('//*[text()="Redmine guide"]');
   }
 
   async goto() {
@@ -34,6 +36,14 @@ exports.MainPage = class MainPage {
 
   async clickOnOwerButton() {
     await this.owerButton.click();
+  }
+
+  async clickOnForumButton() {
+    await this.forumButton.click();
+  }
+
+  async clickOnGuideButton() {
+    await this.guideButton.click();
   }
 
 }

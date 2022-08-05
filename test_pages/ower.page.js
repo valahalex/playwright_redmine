@@ -8,7 +8,7 @@ exports.OwerPage = class OwerPage {
 
     constructor(page) {
         this.page = page;
-        this.owerLabel = page.locator("//h2[text()='Overview']");
+        this.owerLabel = page.locator('#content');
 
     }
 
