@@ -31,7 +31,7 @@ jobs:
     - name: Deploy report
       uses: valahalex/github-pages-deploy-action@3.1.0
       if: always()
-      whit: 
+      with: 
         BRANCH: main
         FOLDER: allure-report
         TARGET_FOLDER: docs
