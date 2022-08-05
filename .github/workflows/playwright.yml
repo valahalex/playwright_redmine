@@ -23,7 +23,7 @@ jobs:
       if: always()
       #try to save history
       run: cp -r $(pwd)/docs/history/. $(pwd)/allure-results/history || true && npm run report
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2
       if: always()
       with: 
         name: allure-report
