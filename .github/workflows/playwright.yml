@@ -28,7 +28,7 @@ jobs:
       if: always()
       with: 
         name: allure-report
-        path: ./docs
+        path: ./allure-report
     - uses: actions/upload-artifact@v2
       if: always()
       with:
