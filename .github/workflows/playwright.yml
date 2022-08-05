@@ -36,7 +36,7 @@ jobs:
         path: playwright-report/
 
     - name: Deploy 🚀
-      uses: valahalex/github-pages-deploy-action@v4
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: docs # The folder the action should deploy.
 
