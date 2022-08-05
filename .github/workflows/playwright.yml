@@ -28,6 +28,8 @@ jobs:
       with: 
         name: allure-report
         path: ./allure-report
+    - name: Open allure report
+    - uses: npm run open
     - uses: actions/upload-artifact@v2
       if: always()
       with:
