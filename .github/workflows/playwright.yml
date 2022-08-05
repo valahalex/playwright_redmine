@@ -28,13 +28,6 @@ jobs:
       with: 
         name: allure-report
         path: ./allure-report
-    - name: Deploy report
-      uses: valahalex/github-pages-deploy-action@3.1.0
-      if: always()
-      with: 
-        BRANCH: main
-        FOLDER: allure-report
-        TARGET_FOLDER: docs
     - uses: actions/upload-artifact@v2
       if: always()
       with:
