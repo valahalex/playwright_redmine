@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Tue Aug 09 14:47:00 UTC 2022","Tue Aug 09 14:47:07 UTC 2022","7440","chromium","main.spec.js","","","","First test: check registration function",""
+"passed","Tue Aug 09 15:57:52 UTC 2022","Tue Aug 09 15:57:59 UTC 2022","6635","chromium","main.spec.js","","","","First test: check registration function",""

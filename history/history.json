@@ -1,1 +1,1 @@
-{"chromium main.spec.js First test: check registration function":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"6427c3304ab0b18e","status":"passed","time":{"start":1660056420520,"stop":1660056427960,"duration":7440}}]}}
+{"chromium main.spec.js First test: check registration function":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"3886fedcfafb34f5","status":"passed","time":{"start":1660060672517,"stop":1660060679152,"duration":6635}}]}}
