@@ -11,10 +11,4 @@ exports.OwerPage = class OwerPage {
         this.owerLabel = page.locator('#content');
 
     }
-
-    async chekingOwerResult() {
-        const owerHeadLabel = await this.owerLabel.isVisible();
-        expect(owerHeadLabel).toBeTruthy();
-    }
-
 }

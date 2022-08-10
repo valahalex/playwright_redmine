@@ -16,9 +16,4 @@ exports.ForumPage = class ForumPage {
     async clickOnForumButton() {
         this.forumButton.click();
     }
-
-    async chekingForumResult() {
-        const forumHeadLabel = await this.forumLabel.isVisible();
-        expect(forumHeadLabel).toBeTruthy();
-    }
 }

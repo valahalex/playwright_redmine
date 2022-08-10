@@ -19,11 +19,5 @@ exports.RedmineGuidePage = class RedmineGuidePage {
 
     async clickOnLink() {
         await this.link.click();
-    }
-
-    async chekingLinkResult() {
-        const linkLabel = await this.curentPageLink.isVisible();
-        expect(linkLabel).toBeTruthy();
-    }
-    
+    }    
 }

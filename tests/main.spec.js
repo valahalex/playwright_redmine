@@ -6,7 +6,7 @@ const { OwerPage } = require('../test_pages/ower.page.js');
 const { ForumPage } = require('../test_pages/forum.page.js');
 const { RedmineGuidePage } = require('../test_pages/redmin.guide.page.js');
 
-test('First test redmine.org', async ({page})=> {
+test('First test: check registration function', async ({page})=> {
 
   const mainPage = new MainPage(page);
   const registrationPage = new RegistrationPage(page);
@@ -19,10 +19,11 @@ test('First test redmine.org', async ({page})=> {
   await registrationPage.inputLastName();
   await registrationPage.inputEmail();
   await registrationPage.clickOnSubmitButton();
-  await registrationPage.isConfLabelIsVisible();
+  expect(await registrationPage.confirmLabel.isVisible()).toBeTruthy();
+
 });
 
-test('Second test redmine.org', async ({page})=> {
+test('Second test: check search function', async ({page})=> {
 
   const mainPage = new MainPage(page);
   const searchPage = new SearchPage(page);
@@ -32,22 +33,22 @@ test('Second test redmine.org', async ({page})=> {
   await mainPage.addToSearchInputField();
   await mainPage.presEnter();
   await searchPage.headerLabel.waitFor();
-  await searchPage.chekingFirstResult();
-  await searchPage.chekingSecondResult();
+  expect(await searchPage.headerLabel.isVisible()).toBeTruthy();
+  expect(await searchPage.resulSearchLabel.isVisible()).toBeTruthy();
 });
 
 
-test('Third test redmine.org', async ({page})=> {
+test('Third test: does the ower button work?', async ({page})=> {
 
   const mainPage = new MainPage(page);
   const owerPage = new OwerPage(page);
 
   await mainPage.goto();
   await mainPage.clickOnOwerButton();
-  await owerPage.chekingOwerResult();
+  expect(await owerPage.owerLabel.isVisible()).toBeTruthy();
 });
 
-test('Fourth test redmine.org', async ({page})=> {
+test('Fourth test: does the forum button work?', async ({page})=> {
 
   const mainPage = new MainPage(page);
   const forumPage = new ForumPage(page);
@@ -55,19 +56,18 @@ test('Fourth test redmine.org', async ({page})=> {
   await mainPage.goto();
   await mainPage.clickOnForumButton();
   await page.waitForLoadState();
-  await forumPage.chekingForumResult();
+  expect(await forumPage.forumLabel.isVisible()).toBeTruthy();
 });
 
-test('Fifth test redmine.org', async ({page})=> {
+test('Fifth test: do links to external sites work?', async ({page})=> {
 
   const mainPage = new MainPage(page);
   const redminGuidePage = new RedmineGuidePage(page);
-  
 
   await mainPage.goto();
   await mainPage.clickOnGuideButton();
   await redminGuidePage.clickOnEmailConfButton();
   await redminGuidePage.clickOnLink();
   await page.waitForLoadState();
-  await redminGuidePage.chekingLinkResult();
+  expect(await redminGuidePage.curentPageLink.isVisible()).toBeTruthy();
 });

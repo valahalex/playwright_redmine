@@ -50,10 +50,4 @@ exports.RegistrationPage = class RegistrationPage {
     const randomSome = new RandomSome(this.page);
     await this.userEmailInputField.fill(await randomSome.makeid(7) + '@gmail.com');
   }
-
-  async isConfLabelIsVisible() {
-    const result = await this.confirmLabel.isVisible();
-    expect(result).toBeTruthy();
-  }
-
 }
