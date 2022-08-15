@@ -19,7 +19,6 @@ test('First test: check registration function', async ({page})=> {
   await registrationPage.inputLastName();
   await registrationPage.inputEmail();
   await registrationPage.clickOnSubmitButton();
-  
   expect(await registrationPage.confirmLabel.isVisible()).toBeTruthy();
 
 });

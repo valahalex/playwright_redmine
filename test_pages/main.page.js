@@ -1,6 +1,6 @@
-const { default: GlobalPage } = require('../test_pages/global.page.js');
+const { default: PrimePage } = require('../test_pages/prime.page.js');
 
-exports.MainPage = class MainPage extends GlobalPage {
+exports.MainPage = class MainPage extends PrimePage {
 
   /**
    * @param {import('@playwright/test').Page} page
