@@ -7,12 +7,14 @@ const { ForumPage } = require('../test_pages/forum.page.js');
 const { RedmineGuidePage } = require('../test_pages/redmin.guide.page.js');
 
 test('First test: check registration function', async ({page})=> {
-
+  
   const mainPage = new MainPage(page);
   const registrationPage = new RegistrationPage(page);
   
-  await mainPage.goto();
+  await mainPage.goToPage();
+
   await mainPage.clickOnregistrButton();
+
   await registrationPage.inputLogin();
   await registrationPage.inputPassword();
   await registrationPage.inputFirstName();
@@ -28,7 +30,7 @@ test('Second test: check search function', async ({page})=> {
   const mainPage = new MainPage(page);
   const searchPage = new SearchPage(page);
 
-  await mainPage.goto();
+  await mainPage.goToPage();
   await mainPage.clickOnSearchButton();
   await mainPage.addToSearchInputField();
   await mainPage.presEnter();
@@ -43,7 +45,7 @@ test('Third test: does the ower button work?', async ({page})=> {
   const mainPage = new MainPage(page);
   const owerPage = new OwerPage(page);
 
-  await mainPage.goto();
+  await mainPage.goToPage();
   await mainPage.clickOnOwerButton();
   expect(await owerPage.owerLabel.isVisible()).toBeTruthy();
 });
@@ -53,7 +55,7 @@ test('Fourth test: does the forum button work?', async ({page})=> {
   const mainPage = new MainPage(page);
   const forumPage = new ForumPage(page);
 
-  await mainPage.goto();
+  await mainPage.goToPage();
   await mainPage.clickOnForumButton();
   await page.waitForLoadState();
   expect(await forumPage.forumLabel.isVisible()).toBeTruthy();
@@ -64,7 +66,7 @@ test('Fifth test: do links to external sites work?', async ({page})=> {
   const mainPage = new MainPage(page);
   const redminGuidePage = new RedmineGuidePage(page);
 
-  await mainPage.goto();
+  await mainPage.goToPage();
   await mainPage.clickOnGuideButton();
   await redminGuidePage.clickOnEmailConfButton();
   await redminGuidePage.clickOnLink();

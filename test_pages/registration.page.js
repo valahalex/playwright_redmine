@@ -9,15 +9,39 @@ exports.RegistrationPage = class RegistrationPage {
     */
 
   constructor(page) {
-    this.page = page;
-    this.userLoginInputFild = page.locator('#user_login');
-    this.userPasswordInputField = page.locator('#user_password');
-    this.userPasswordConfInputField = page.locator('#user_password_confirmation');
-    this.userFirstNameInputField = page.locator('#user_firstname');
-    this.userLastNameInputField = page.locator('#user_lastname');
-    this.userEmailInputField = page.locator('#user_mail');
-    this.submitButton = page.locator('[name="commit"]');   
-    this.confirmLabel = page.locator('#flash_notice'); 
+    this.page = page;      
+  }
+
+  get userLoginInputFild() {
+    return this.page.locator('#user_login');
+  }
+
+  get userPasswordInputField() {
+    return this.page.locator('#user_password');
+  }
+
+  get userPasswordConfInputField() {
+    return this.page.locator('#user_password_confirmation');
+  }
+
+  get userFirstNameInputField() {
+    return this.page.locator('#user_firstname');
+  }
+
+  get userLastNameInputField() {
+    return this.page.locator('#user_lastname');
+  }
+
+  get userEmailInputField() {
+    return this.page.locator('#user_mail');
+  }
+
+  get submitButton() {
+    return this.page.locator('[name="commit"]'); 
+  }
+
+  get confirmLabel() {
+    return this.page.locator('#flash_notice');
   }
 
   async clickOnSubmitButton() {

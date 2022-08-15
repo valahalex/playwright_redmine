@@ -1,5 +1,3 @@
-const { expect } = require('@playwright/test');
-
 exports.ForumPage = class ForumPage {
 
     /**
@@ -8,9 +6,14 @@ exports.ForumPage = class ForumPage {
 
     constructor(page) {
         this.page = page;
-        this.forumButton = page.locator('[href="/projects/redmine/boards"]');
-        this.forumLabel = page.locator("//h2[contains(text(),'Forum')]");
+    }
 
+    get forumButton() {
+        return this.page.locator('[href="/projects/redmine/boards"]');
+    }
+
+    get forumLabel() {
+        return this.page.locator("//h2[contains(text(),'Forum')]");
     }
 
     async clickOnForumButton() {

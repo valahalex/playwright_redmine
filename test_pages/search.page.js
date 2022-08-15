@@ -8,7 +8,13 @@ exports.SearchPage = class SearchPage {
 
     constructor(page) {
         this.page = page;
-        this.headerLabel = page.locator("//h2[contains(text(), 'Search')]");
-        this.resulSearchLabel = page.locator('//h3');
+    }
+
+    get headerLabel() {
+        return this.page.locator("//h2[contains(text(), 'Search')]");
+    }
+
+    get resulSearchLabel() {
+        return this.page.locator('//h3');
     }
 }

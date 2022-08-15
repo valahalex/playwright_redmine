@@ -8,10 +8,20 @@ exports.RedmineGuidePage = class RedmineGuidePage {
 
     constructor(page) {
         this.page = page;
-        this.emailConfigurationLabel = page.locator('[href="/projects/redmine/wiki/EmailConfiguration"]');
-        this.link = page.locator('p a[href*="http://g"]');
-        this.curentPageLink = page.locator('h3 a[href="#action-mailer-configuration"]');
+
     }
+
+    get emailConfigurationLabel() {
+        return this.page.locator('[href="/projects/redmine/wiki/EmailConfiguration"]');
+    }
+
+    get link() {
+        return this.page.locator('p a[href*="http://g"]');
+    }
+    
+    get curentPageLink() {
+        return this.page.locator('h3 a[href="#action-mailer-configuration"]');
+    } 
 
     async clickOnEmailConfButton() {
         await this.emailConfigurationLabel.click();

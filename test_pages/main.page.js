@@ -1,21 +1,37 @@
-const { expect } = require('@playwright/test');
+const { default: GlobalPage } = require('../test_pages/global.page.js');
 
-exports.MainPage = class MainPage {
+exports.MainPage = class MainPage extends GlobalPage {
 
   /**
    * @param {import('@playwright/test').Page} page
    */
   constructor(page) {
+    super();
     this.page = page;
-    this.registerButton = page.locator('.register');
-    this.searchInputField = page.locator('#q');
-    this.owerButton = page.locator('[href="/projects/redmine"]');
-    this.forumButton = page.locator('[href="/projects/redmine/boards"]');
-    this.guideButton = page.locator('//*[text()="Redmine guide"]');
   }
 
-  async goto() {
-    await this.page.goto('https://www.redmine.org/');
+  get registerButton() {
+    return this.page.locator('.register');
+  }
+
+  get searchInputField() {
+    return this.page.locator('#q');
+  }
+
+  get owerButton() {
+    return this.page.locator('[href="/projects/redmine"]')
+  }
+
+  get forumButton() {
+    return this.page.locator('[href="/projects/redmine/boards"]');
+  }
+
+  get guideButton() {
+    return this.page.locator('//*[text()="Redmine guide"]');
+  }
+
+  async goToPage() {
+    await super.openPage('https://www.redmine.org/')
   }
 
   async clickOnregistrButton() {
