@@ -12,9 +12,7 @@ test('First test: check registration function', async ({page})=> {
   const registrationPage = new RegistrationPage(page);
   
   await mainPage.goToPage();
-
   await mainPage.clickOnregistrButton();
-
   await registrationPage.inputLogin();
   await registrationPage.inputPassword();
   await registrationPage.inputFirstName();
