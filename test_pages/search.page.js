@@ -1,5 +1,3 @@
-const { expect } = require('@playwright/test');
-
 exports.SearchPage = class SearchPage {
 
     /**

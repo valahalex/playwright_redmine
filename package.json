@@ -8,7 +8,7 @@
     "test:head": "playwright test --headed",
     "test:allure": "playwright test --reporter=allure-playwright",
     "report": "npx allure generate",
-    "open":"allure open allure-report"
+    "open": "allure open allure-report"
   },
   "keywords": [],
   "author": "valahalex",
@@ -17,5 +17,8 @@
     "@playwright/test": "^1.24.2",
     "allure-commandline": "^2.18.1",
     "allure-playwright": "^2.0.0-beta.18"
+  },
+  "dependencies": {
+    "randomstring": "^1.2.2"
   }
 }

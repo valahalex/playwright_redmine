@@ -1,5 +1,4 @@
-const { expect } = require('@playwright/test');
-const { RandomSome } = require('../unity/random.js');
+const randomstring = require("randomstring");
 
 exports.RegistrationPage = class RegistrationPage {
 
@@ -49,29 +48,24 @@ exports.RegistrationPage = class RegistrationPage {
   }
 
   async inputLogin() {
-    const randomSome = new RandomSome(this.page);
-    await this.userLoginInputFild.fill('user' + await randomSome.makeid(5));
+    await this.userLoginInputFild.fill('user' + randomstring.generate(5));
   }
 
   async inputPassword() {
-    const randomSome = new RandomSome(this.page);
-    const password = toString(randomSome.makeid(9));
+    const password = toString(randomstring.generate(9));
     await this.userPasswordInputField.fill(password);
     await this.userPasswordConfInputField.fill(password);
   }
 
   async inputFirstName() {
-    const randomSome = new RandomSome(this.page);
-    await this.userFirstNameInputField.fill('name' + await randomSome.makeid(4));
+    await this.userFirstNameInputField.fill('name' + randomstring.generate(4));
   }
 
   async inputLastName() {
-    const randomSome = new RandomSome(this.page);
-    await this.userLastNameInputField.fill('lastname' + await randomSome.makeid(3))
+    await this.userLastNameInputField.fill('lastname' + randomstring.generate(3))
   }
 
   async inputEmail() {
-    const randomSome = new RandomSome(this.page);
-    await this.userEmailInputField.fill(await randomSome.makeid(7) + '@gmail.com');
+    await this.userEmailInputField.fill(randomstring.generate(7) + '@gmail.com');
   }
 }

@@ -1,5 +1,3 @@
-const { expect } = require('@playwright/test');
-
 exports.RedmineGuidePage = class RedmineGuidePage {
 
     /**
